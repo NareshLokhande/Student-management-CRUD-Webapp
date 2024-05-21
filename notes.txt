@@ -1,0 +1,48 @@
+By default every server follows CORS policy
+CORS :Cross origin Resource Sharing
+Frontend : 192.168.34.22 (e.g)
+Backend : 192.172.18.14
+
+By default server has blocked the request from all the clients
+In our Backend application we have to specify from which client we have to accept the request or from which client you dont want to 
+
+We have to allow a CORS policy
+To allow the CORS policy we need to deal with request headers but id we dont want to write entire code for dealing with request headers for the CORS then we will Use a module i.e. CORS
+
+Use Grid : AG Grid to display the data, Pagination
+
+condition ? v1 :v2
+
+student.length == 0 ? <Alert> : <Table>
+
+For react-router-dom v6:
+const Navigate = useNavigate();
+navigate('/edit-student');
+
+for react-router-dom v5:
+const history = useHistory();
+history.push('/edit-student');
+
+
+3. Axios : Response data
+
+Steps for authentification at the Frontend
+
+1. First login component should open
+    user will enter username and password and will check login button
+    On login button click => We need to call login application
+    Response =>
+    1. Login Successfull : 
+        we will receive the token from the Response
+        Store token in the browser local storage
+        Redirect a user to dashboard
+    2. Login fail
+        Display an error message like username or password invalid
+
+2. To call a secure application
+    We need to read token from local storage and pass token in the authorization header of the request
+
+3. Logout : Remove the token from localStorage and redirect a user to login component
+
+4. On secure Component, first we need to check for the login status by checking the availability of the token in localStorage 
+If token is found then redirect to desired route or else redirect a user to login component
